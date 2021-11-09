@@ -8,21 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		5E4CB38A273AD28C00B2F81A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4CB389273AD28C00B2F81A /* AppDelegate.swift */; };
-		5E4CB38C273AD28C00B2F81A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4CB38B273AD28C00B2F81A /* ViewController.swift */; };
 		5E4CB38E273AD28C00B2F81A /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 5E4CB38D273AD28C00B2F81A /* Experience.rcproject */; };
-		5E4CB391273AD28C00B2F81A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4CB38F273AD28C00B2F81A /* Main.storyboard */; };
 		5E4CB393273AD28E00B2F81A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E4CB392273AD28E00B2F81A /* Assets.xcassets */; };
 		5E4CB396273AD28E00B2F81A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4CB394273AD28E00B2F81A /* LaunchScreen.storyboard */; };
+		5E4CB39F273AD61B00B2F81A /* ARExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4CB39E273AD61B00B2F81A /* ARExperienceViewController.swift */; };
+		5E4CB3A1273AD62800B2F81A /* ARExperiencePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4CB3A0273AD62800B2F81A /* ARExperiencePresenter.swift */; };
+		5E4CB3A3273AD63500B2F81A /* ARExperienceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4CB3A2273AD63500B2F81A /* ARExperienceRouter.swift */; };
+		5E4CB3A5273AD65900B2F81A /* ARExperienceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4CB3A4273AD65900B2F81A /* ARExperienceAssembly.swift */; };
+		5E4CB3A8273AD94C00B2F81A /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5E4CB3A7273AD94C00B2F81A /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E4CB386273AD28C00B2F81A /* MeasureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeasureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4CB389273AD28C00B2F81A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E4CB38B273AD28C00B2F81A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E4CB38D273AD28C00B2F81A /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
-		5E4CB390273AD28C00B2F81A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E4CB392273AD28E00B2F81A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E4CB395273AD28E00B2F81A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E4CB39E273AD61B00B2F81A /* ARExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExperienceViewController.swift; sourceTree = "<group>"; };
+		5E4CB3A0273AD62800B2F81A /* ARExperiencePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExperiencePresenter.swift; sourceTree = "<group>"; };
+		5E4CB3A2273AD63500B2F81A /* ARExperienceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExperienceRouter.swift; sourceTree = "<group>"; };
+		5E4CB3A4273AD65900B2F81A /* ARExperienceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExperienceAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4CB3A8273AD94C00B2F81A /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,14 +61,32 @@
 		5E4CB388273AD28C00B2F81A /* MeasureApp */ = {
 			isa = PBXGroup;
 			children = (
-				5E4CB389273AD28C00B2F81A /* AppDelegate.swift */,
-				5E4CB38B273AD28C00B2F81A /* ViewController.swift */,
+				5E4CB39D273AD5EA00B2F81A /* ARExperience */,
+				5E4CB39C273AD57F00B2F81A /* AppConfigure */,
 				5E4CB38D273AD28C00B2F81A /* Experience.rcproject */,
-				5E4CB38F273AD28C00B2F81A /* Main.storyboard */,
+			);
+			path = MeasureApp;
+			sourceTree = "<group>";
+		};
+		5E4CB39C273AD57F00B2F81A /* AppConfigure */ = {
+			isa = PBXGroup;
+			children = (
+				5E4CB389273AD28C00B2F81A /* AppDelegate.swift */,
 				5E4CB392273AD28E00B2F81A /* Assets.xcassets */,
 				5E4CB394273AD28E00B2F81A /* LaunchScreen.storyboard */,
 			);
-			path = MeasureApp;
+			path = AppConfigure;
+			sourceTree = "<group>";
+		};
+		5E4CB39D273AD5EA00B2F81A /* ARExperience */ = {
+			isa = PBXGroup;
+			children = (
+				5E4CB39E273AD61B00B2F81A /* ARExperienceViewController.swift */,
+				5E4CB3A0273AD62800B2F81A /* ARExperiencePresenter.swift */,
+				5E4CB3A2273AD63500B2F81A /* ARExperienceRouter.swift */,
+				5E4CB3A4273AD65900B2F81A /* ARExperienceAssembly.swift */,
+			);
+			path = ARExperience;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +105,9 @@
 			dependencies = (
 			);
 			name = MeasureApp;
+			packageProductDependencies = (
+				5E4CB3A7273AD94C00B2F81A /* Swinject */,
+			);
 			productName = MeasureApp;
 			productReference = 5E4CB386273AD28C00B2F81A /* MeasureApp.app */;
 			productType = "com.apple.product-type.application";
@@ -109,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 5E4CB37D273AD28C00B2F81A;
+			packageReferences = (
+				5E4CB3A6273AD94C00B2F81A /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 5E4CB387273AD28C00B2F81A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +155,6 @@
 			files = (
 				5E4CB396273AD28E00B2F81A /* LaunchScreen.storyboard in Resources */,
 				5E4CB393273AD28E00B2F81A /* Assets.xcassets in Resources */,
-				5E4CB391273AD28C00B2F81A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E4CB38C273AD28C00B2F81A /* ViewController.swift in Sources */,
 				5E4CB38A273AD28C00B2F81A /* AppDelegate.swift in Sources */,
+				5E4CB3A1273AD62800B2F81A /* ARExperiencePresenter.swift in Sources */,
+				5E4CB3A5273AD65900B2F81A /* ARExperienceAssembly.swift in Sources */,
+				5E4CB39F273AD61B00B2F81A /* ARExperienceViewController.swift in Sources */,
+				5E4CB3A3273AD63500B2F81A /* ARExperienceRouter.swift in Sources */,
 				5E4CB38E273AD28C00B2F81A /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,14 +177,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5E4CB38F273AD28C00B2F81A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E4CB390273AD28C00B2F81A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5E4CB394273AD28E00B2F81A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,9 +309,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KN29ZS52A3;
+				DEVELOPMENT_TEAM = N52VAV9R8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -304,6 +329,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "github.com-ablmsky.MeasureApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,9 +341,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KN29ZS52A3;
+				DEVELOPMENT_TEAM = N52VAV9R8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,6 +361,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "github.com-ablmsky.MeasureApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -362,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E4CB3A6273AD94C00B2F81A /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E4CB3A7273AD94C00B2F81A /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E4CB3A6273AD94C00B2F81A /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E4CB37E273AD28C00B2F81A /* Project object */;
 }
